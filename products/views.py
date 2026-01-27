@@ -4,4 +4,4 @@ def index(request):
     return render(request, 'products/index.html', {'title': 'STORE'})
 
 def products(request):
-    return render(request, 'products/products.html')
+    return render(request, 'products/products.html', {'title': 'OUR GOODS'})

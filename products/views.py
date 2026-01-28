@@ -30,4 +30,4 @@ def products(request):
             },
         ]
     }
-    return render(request, 'products/products.html')
+    return render(request, 'products/products.html', context)

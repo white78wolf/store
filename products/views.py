@@ -2,7 +2,8 @@ from django.shortcuts import render
 
 def index(request):
     context = {
-        'title': 'Store',        
+        'title': 'Store', 
+        'is_promotion': True,
     }
     return render(request, 'products/index.html', context)
 

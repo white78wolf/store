@@ -2,19 +2,19 @@
     "model": "products.product",
     "pk": 1,
     "fields": {
-        "name": "в•«в••РЃСЌв€љС‰ С—С”С„С€ Adidas С‘ СЊСЋСЌСЋСѓРЃСЂСЊСЊСЋС‰",
-        "description": "в• В СѓСЉСЂВ  Р„СЉСЂСЌв„– С„С‹В  С‘С‚С€Р„В°СЋР„СЋС‚. в•¤Р„С€С‹в„– С€ СЉСЋСЊР‡СЋРЃР„ С„С‹В  СЏСЋС‚С‘С…С„СЌС…С‚СЌСЋС‰ СЌСЋС‘СЉС€.",
+        "name": "Худи Adidas",
+        "description": "Худи - не от слова \"худо\". И не от слова \"художник\". Хотя... одно другому не мешает.",
         "price": "6000.00",
         "quantity": 10,
         "image": "products_images/Adidas-hoodie.webp",
-        "category": 1
+        "category": 5
     }
 }, {
     "model": "products.product",
     "pk": 2,
     "fields": {
-        "name": "в•¤С€СЌВ В  СЉС”РЃР„СЉСЂ The North Face",
-        "description": "в”њС‹СЂС„СЉСЂВ  Р„СЉСЂСЌв„–. в”¬СЋС„СЋСЌС…СЏРЃСЋСЌС€РЋСЂС…СЊСЋС… СЏСЋСЉРЃв€љР„С€С…. в•¦в••СѓСЉС€С‰ С€ Р„в••СЏС‹в€љС‰ СЏС”С—СЋС‚в€љС‰ СЌСЂСЏСЋС‹СЌС€Р„С…С‹в„–.",
+        "name": "Куртка The North Face",
+        "description": "Светлые волосы, хмурое лицо - это The North Face. Зато не мокнет.",
         "price": "9999.00",
         "quantity": 7,
         "image": "products_images/north_face.jpg",
@@ -24,41 +24,41 @@
     "model": "products.product",
     "pk": 3,
     "fields": {
-        "name": "в•©СЋРЃС€СћСЌС…С‚в€љС‰ СЋС‚С…РЃС‘СЂС‰С‡-Р„СЋСЏ Asos Design",
-        "description": "в• СЂР„С…РЃС€СЂС‹ С‘ СЏС‹в– В°С…С‚СЋС‰ Р„С…СЉС‘Р„С”РЃСЋС‰. в•™С„СЋСЃСЌв€љС‰ С€ СЊВ СѓСЉС€С‰.",
+        "name": "Оверсайз-топ Asos Design",
+        "description": "Носи на здоровье, дорогой - сам такой ношу! И племянник носит, и падчерица - никто не жалуется, все довольны!",
         "price": "3400.00",
         "quantity": 15,
         "image": "products_images/asos_design.jpeg",
-        "category": 1
+        "category": 5
     }
 }, {
     "model": "products.product",
     "pk": 4,
     "fields": {
-        "name": "в•«в••РЃСЌв€љС‰ РЃв– СЉС‡СЂСЉ Nike Heritage",
-        "description": "в•¬СЃВ·в••СЊСЌв€љС‰ С€ С‘Р„С€С‹в„–СЌв€љС‰, СЊСЌСЋС†С…С‘Р„С‚СЋ СЉСЂРЃСЊСЂСЌСЋС‚ С€ С‘С…СЉРЋС€С‰.",
+        "name": "Рюкзак Nike Heritage",
+        "description": "Вам позавидует любой хомяк, а белки будут плакать в подушку от злости.",
         "price": "2700.00",
         "quantity": 9,
         "image": "products_images/nike_heritage.webp",
-        "category": 3
+        "category": 2
     }
 }, {
     "model": "products.product",
     "pk": 5,
     "fields": {
-        "name": "в•«в••РЃСЌв€љС… Р„С”Р‡С‹С€ СЌСЂ СЏС‹СЂР„Р‡СЋРЃСЊС… Dr Martens 1461 Bex",
-        "description": "в•©СЂСЃС‹С”СћСЉС€, Р„С€СЏ-Р„СЋСЏ. \"в•ђСЂ С‹СЂСЃС”Р„С…СЌСЂС—, СЌСЂС—!\" в•љ Р„РЃС€ СЏСЂРЃв€љ С‹в– С‚С…РЃС‘СЋС‚.",
+        "name": "Ботинки на платформах Dr Martens 1461 Bex",
+        "description": "На лабутенах, нах! И в штанах из нашего же каталога.",
         "price": "8800.00",
         "quantity": 12,
         "image": "products_images/dr_martens.webp",
-        "category": 2
+        "category": 3
     }
 }, {
     "model": "products.product",
     "pk": 6,
     "fields": {
-        "name": "в•Ґв••СЊСЌСЋ-С‘С€СЌС€С… В°С€РЃСЋСЉС€С… С‘Р„РЃСЋСѓС€С… СЃРЃв– СЉС€ ASOS DESIGN",
-        "description": "в•ЄС€СЉСЂРЃСЌв€љС… В°Р„СЂСЌС€В°СЉС€. в”ЂС…С„ СЌСЋС‘С€С‹ 30 С‹С…Р„, СЋР„С…РЋ СЌСЋС‘С€С‹ 20 С‹С…Р„, В  СЌСЋС‘С€С‹ 10 С‹С…Р„, С€ С‘в€љСЌ СЊСЋС‰ СЏСЋСЌСЋС‘С€Р„... СЌС” С‹С…Р„ 5 Р„СЋСћСЌСЋ.",
+        "name": "Синие штаны ASOS DESIGN",
+        "description": "Мой дед носил эти штаны 20 лет, мой отец носил эти штаны 10 лет, я носил их 5 лет...",
         "price": "6300.00",
         "quantity": 8,
         "image": "products_images/asos_pants.jpeg",

@@ -1,0 +1,67 @@
+[{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "name": "╫╕Ёэ√щ їєфш Adidas ё ьюэюуЁрььющ",
+        "description": "╠ уър  Єърэ№ фы  ётшЄ°юЄют. ╤Єшы№ ш ъюьЇюЁЄ фы  яютёхфэхтэющ эюёъш.",
+        "price": "6000.00",
+        "quantity": 10,
+        "image": "products_images/Adidas-hoodie.webp",
+        "category": 1
+    }
+}, {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "name": "╤шэ   ъєЁЄър The North Face",
+        "description": "├ырфър  Єърэ№. ┬юфюэхяЁюэшЎрхьюх яюъЁ√Єшх. ╦╕уъшщ ш Є╕яы√щ яєїют√щ эряюыэшЄхы№.",
+        "price": "9999.00",
+        "quantity": 7,
+        "image": "products_images/north_face.jpg",
+        "category": 4
+    }
+}, {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "name": "╩юЁшўэхт√щ ютхЁёрщч-Єюя Asos Design",
+        "description": "╠рЄхЁшры ё яы■°хтющ ЄхъёЄєЁющ. ╙фюсэ√щ ш ь уъшщ.",
+        "price": "3400.00",
+        "quantity": 15,
+        "image": "products_images/asos_design.jpeg",
+        "category": 1
+    }
+}, {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "name": "╫╕Ёэ√щ Ё■ъчръ Nike Heritage",
+        "description": "╬с·╕ьэ√щ ш ёЄшы№э√щ, ьэюцхёЄтю ърЁьрэют ш ёхъЎшщ.",
+        "price": "2700.00",
+        "quantity": 9,
+        "image": "products_images/nike_heritage.webp",
+        "category": 3
+    }
+}, {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "name": "╫╕Ёэ√х ЄєЇыш эр яырЄЇюЁьх Dr Martens 1461 Bex",
+        "description": "╩рсыєўъш, Єшя-Єюя. \"═р ырсєЄхэрї, эрї!\" ╚ ЄЁш ярЁ√ ы■тхЁёют.",
+        "price": "8800.00",
+        "quantity": 12,
+        "image": "products_images/dr_martens.webp",
+        "category": 2
+    }
+}, {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "name": "╥╕ьэю-ёшэшх °шЁюъшх ёЄЁюушх сЁ■ъш ASOS DESIGN",
+        "description": "╪шърЁэ√х °Єрэш°ъш. ─хф эюёшы 30 ыхЄ, юЄхЎ эюёшы 20 ыхЄ,   эюёшы 10 ыхЄ, ш ё√э ьющ яюэюёшЄ... эє ыхЄ 5 Єюўэю.",
+        "price": "6300.00",
+        "quantity": 8,
+        "image": "products_images/asos_pants.jpeg",
+        "category": 4
+    }
+}]

@@ -30,3 +30,7 @@ def registration(request):
         form = UserRegistrationForm()
     context = {'form': form, 'title': 'Store - Регистрация пользователя'}
     return render(request, 'users/registration.html', context)
+
+def profile(request):
+    context = {'title': 'Store - Профиль пользователя'}
+    return render(request, 'users/profile.html', context)

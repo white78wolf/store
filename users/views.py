@@ -33,10 +33,12 @@ def registration(request):
 
 def profile(request):
     if request.method == 'POST':
-        form = UserProfileForm(data=request.POST)
+        form = UserProfileForm(instance=request.user, data=request.POST)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse('users:profile'))
+        else:
+            print(form.errors)
     else:
         form = UserProfileForm(instance=request.user)
     context = {'title': 'Store - Профиль пользователя', 'form': form}

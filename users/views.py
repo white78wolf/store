@@ -3,7 +3,7 @@ from django.contrib import auth
 from django.urls import reverse
 
 from users.models import User
-from users.forms import UserLoginForm, UserRegistrationForm
+from users.forms import UserLoginForm, UserRegistrationForm, UserProfileForm
 
 def login(request):
     if request.method == 'POST':
@@ -32,5 +32,12 @@ def registration(request):
     return render(request, 'users/registration.html', context)
 
 def profile(request):
-    context = {'title': 'Store - Профиль пользователя'}
+    if request.method == 'POST':
+        form = UserProfileForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('users:profile'))
+    else:
+        form = UserProfileForm(instance=request.user)
+    context = {'title': 'Store - Профиль пользователя', 'form': form}
     return render(request, 'users/profile.html', context)

@@ -13,7 +13,8 @@ def login(request):
             password = request.POST['password']
             user = auth.authenticate(username = username, password = password)
             if user:
-                auth.login(request, user)                
+                auth.login(request, user)
+                messages.success(request, 'Вы вошли в систему')
                 return HttpResponseRedirect(reverse('index'))
     else:
         form = UserLoginForm()

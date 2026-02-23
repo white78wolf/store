@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from products.models import ProductCategory, Product, Basket
+from users.models import User
 
 def index(request):
     context = {

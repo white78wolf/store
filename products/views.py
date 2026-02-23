@@ -16,3 +16,6 @@ def products(request):
         'categories': ProductCategory.objects.all(),
     }
     return render(request, 'products/products.html', context)
+
+def basket_add(request, product_id):
+    pass

@@ -11,7 +11,7 @@ def index(request):
     }
     return render(request, 'products/index.html', context)
 
-def products(request, category_id):    
+def products(request, category_id=None):    
     if category_id:
         category = ProductCategory.objects.get(id=category_id)
         products = Product.objects.filter(category=category)

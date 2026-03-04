@@ -6,6 +6,10 @@ class ProductCategory(models.Model):
     name = models.CharField(max_length=128, unique=True)
     description = models.TextField(null=True, blank=True)
 
+    class Meta:
+        verbose_name = 'category'
+        verbose_name_plural = 'categories'
+
     def __str__(self):
         return self.name
 

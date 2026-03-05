@@ -8,9 +8,10 @@ from django.core.paginator import Paginator
 class IndexView(TemplateView):
     template_name = 'products/index.html'
 
-""" def index(request):
-    context = {'title': 'Store', 'is_promotion': True,}
-    return render(request, 'products/index.html', context) """
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data()
+        context['title'] = 'Store'
+        return context
 
 def products(request, category_id=None, page_number=1):
     products = Product.objects.filter(category_id=category_id) if category_id else Product.objects.all()

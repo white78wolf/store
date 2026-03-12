@@ -2,7 +2,6 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.views.generic.base import TemplateView
 from django.views.generic.list import ListView
-from django.views.generic.edit import CreateView
 
 from products.models import ProductCategory, Product, Basket
 from django.core.paginator import Paginator
@@ -30,12 +29,6 @@ class ProductsListView(ListView):
         context['title'] = 'Store - Каталог'
         context['categories'] = ProductCategory.objects.all()
         return context
-
-class BasketCreateView(CreateView):
-    model = Basket
-
-    def post(self, request, *args, **kwargs):
-        pass    
 
 @login_required
 def basket_add(request, product_id):

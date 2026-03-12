@@ -31,6 +31,12 @@ class ProductsListView(ListView):
         context['categories'] = ProductCategory.objects.all()
         return context
 
+class BasketCreateView(CreateView):
+    model = Basket
+
+    def post(self, request, *args, **kwargs):
+        pass    
+
 @login_required
 def basket_add(request, product_id):
     product = Product.objects.get(id=product_id)

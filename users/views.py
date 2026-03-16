@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.contrib import auth, messages
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.decorators import login_required
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 
 from users.models import User
 from users.forms import UserLoginForm, UserRegistrationForm, UserProfileForm
@@ -30,24 +30,21 @@ class UserRegistrationView(CreateView):
     template_name = 'users/registration.html'
     success_url = reverse_lazy('users:login')
 
-@login_required
-def profile(request):
-    if request.method == 'POST':
-        form = UserProfileForm(instance=request.user, data=request.POST, files=request.FILES)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect(reverse('users:profile'))
-        else:
-            print(form.errors)
-    else:
-        form = UserProfileForm(instance=request.user)    
-    
-    context = {
-        'title': 'Store - Профиль пользователя', 
-        'form': form,
-        'baskets': Basket.objects.filter(user=request.user)
-    }
-    return render(request, 'users/profile.html', context)
+    def get_context_data(self, **kwargs):
+        context = super(UserRegistrationView, self).get_context_data()
+        context['title'] = 'Store - Регистрация'
+        return context
+
+class UserProfileView(UpdateView):
+    model = User
+    form_class = UserProfileForm
+    template_name = 'users/profile.html'        
+
+    def get_context_data(self, **kwargs):
+        context = super(UserProfileView, self).get_context_data()
+        context['title'] = 'Store - Личный кабинет'        
+        context['baskets'] = Basket.objects.filter(user=self.object)
+        return context
 
 def logout(request):
     auth.logout(request)

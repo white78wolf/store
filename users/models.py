@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     image = models.ImageField(upload_to='users_images', null=True, blank=True)
+    is_verified = models.BooleanField(default=False)
     
 class EmailVerification(models.Model):
     code = models.UUIDField(unique=True)

@@ -7,3 +7,8 @@ from products.admin import BasketAdmin
 class UserAdmin(admin.ModelAdmin):
     list_display = ('username',)
     inlines = (BasketAdmin,)
+
+class EmailVerificationAdmin(admin.ModelAdmin):
+    list_display = ('code', 'user', 'expiration')
+    fields = ('code', 'user', 'expiration', 'created')
+    readonly_fields = ('created',)

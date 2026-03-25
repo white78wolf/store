@@ -23,10 +23,6 @@ class UserRegistrationView(TitleMixin, SuccessMessageMixin, CreateView):
     success_message = 'Вы успешно зарегистрированы'
     title = 'Store - Регистрация'
 
-    def get_context_data(self, **kwargs):
-        context = super(UserRegistrationView, self).get_context_data()        
-        return context
-
 class UserProfileView(TitleMixin, UpdateView):
     model = User
     form_class = UserProfileForm

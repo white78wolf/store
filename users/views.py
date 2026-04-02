@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.contrib import auth, messages
 from django.urls import reverse, reverse_lazy
 from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.base import TemplateView
 from django.contrib.auth.views import LoginView
 from django.contrib.messages.views import SuccessMessageMixin
 
@@ -40,3 +41,7 @@ class UserProfileView(TitleMixin, UpdateView):
 def logout(request):
     auth.logout(request)
     return HttpResponseRedirect(reverse('index'))
+
+class EmailVerificationView(TitleMixin, TemplateView):
+    title = 'Store - Подтверждение электронной почты'
+    template_name = 'users/email_verification.html'

@@ -6,9 +6,11 @@ from django.views.generic.list import ListView
 from products.models import ProductCategory, Product, Basket
 from common.views import TitleMixin
 
+
 class IndexView(TitleMixin, TemplateView):
     template_name = 'products/index.html'
     title = 'Store'
+
 
 class ProductsListView(TitleMixin, ListView):
     model = Product
@@ -22,9 +24,10 @@ class ProductsListView(TitleMixin, ListView):
         return queryset.filter(category_id=category_id) if category_id else queryset
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        context = super(ProductsListView, self).get_context_data()        
+        context = super(ProductsListView, self).get_context_data()
         context['categories'] = ProductCategory.objects.all()
         return context
+
 
 @login_required
 def basket_add(request, product_id):
@@ -36,9 +39,10 @@ def basket_add(request, product_id):
     else:
         basket = baskets.first()
         basket.quantity += 1
-        basket.save()    
-    
+        basket.save()
+
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
 
 @login_required
 def basket_remove(request, basket_id):

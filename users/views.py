@@ -1,5 +1,5 @@
-from django.shortcuts import render, HttpResponseRedirect
-from django.contrib import auth, messages
+from django.shortcuts import HttpResponseRedirect
+from django.contrib import auth
 from django.urls import reverse, reverse_lazy
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic.base import TemplateView
@@ -8,13 +8,14 @@ from django.contrib.messages.views import SuccessMessageMixin
 
 from users.models import User, EmailVerification
 from users.forms import UserLoginForm, UserRegistrationForm, UserProfileForm
-from products.models import Basket
 from common.views import TitleMixin
+
 
 class UserLoginView(TitleMixin, LoginView):
     template_name = 'users/login.html'
     form_class = UserLoginForm
     title = 'Store - Авторизация'
+
 
 class UserRegistrationView(TitleMixin, SuccessMessageMixin, CreateView):
     model = User
@@ -23,6 +24,7 @@ class UserRegistrationView(TitleMixin, SuccessMessageMixin, CreateView):
     success_url = reverse_lazy('users:login')
     success_message = 'Вы успешно зарегистрированы'
     title = 'Store - Регистрация'
+
 
 class UserProfileView(TitleMixin, UpdateView):
     model = User
@@ -33,9 +35,11 @@ class UserProfileView(TitleMixin, UpdateView):
     def get_success_url(self):
         return reverse_lazy('users:profile', args=(self.object.id,))
 
+
 def logout(request):
     auth.logout(request)
     return HttpResponseRedirect(reverse('index'))
+
 
 class EmailVerificationView(TitleMixin, TemplateView):
     title = 'Store - Подтверждение электронной почты'

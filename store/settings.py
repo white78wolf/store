@@ -177,5 +177,9 @@ AUTHENTICATION_BACKENDS = [
 SITE_ID = 1
 
 SOCIALACCOUNT_PROVIDERS = {
-
+    'github': {
+        'SCOPE': [
+            'user',
+        ],
+    }
 }

@@ -8,3 +8,6 @@ class IndexViewTestCase(TestCase):
         path = reverse('index')
         response = self.client.get(path)
         print(response)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.context_data['title'], 'Store')

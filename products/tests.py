@@ -17,6 +17,7 @@ class IndexViewTestCase(TestCase):
 
 
 class ProductsListViewTestCase(TestCase):
+    fixtures = ['categories.json', 'goods.json']
 
     def test_list(self):
         path = reverse('products:index')

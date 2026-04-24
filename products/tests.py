@@ -24,8 +24,8 @@ class ProductsListViewTestCase(TestCase):
         path = reverse('products:index')
         response = self.client.get(path)
 
-        products = Product.objects.all()
+        products = Product.objects.all()        
         self.assertEqual(response.status_code, HTTPStatus.OK)
         self.assertEqual(response.context_data['title'], 'Store - Каталог')
         self.assertTemplateUsed(response, 'products/products.html')
-        self.assertEqual(response.context_data['object_list'], products[:3])
+        self.assertEqual(list(response.context_data['object_list']), list(products[:3]))

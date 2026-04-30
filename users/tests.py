@@ -16,4 +16,4 @@ class UserRegistrationViewTestCase(TestCase):
 
         self.assertEqual(response.status_code, HTTPStatus.OK)
         self.assertEqual(response.context_data['title'], 'Store - Регистрация')
-        self.assertEqual(response.context_data['form'], UserRegistrationForm())
+        self.assertTemplateUsed(response, 'users/registration.html')

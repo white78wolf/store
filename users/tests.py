@@ -40,3 +40,10 @@ class UserRegistrationViewTestCase(TestCase):
             email_verification.first().expiration.date(),
             (now() + timedelta(hours=48)).date()
         )
+    
+    def test_user_registration_post_error(self):
+        User.objects.create(username=self.data['username'])
+        response = self.client.post(self.path, self.data)
+
+        self.assertEqual(response.status_code, HTTPStatus.OK)
+        self.assertContains(response, 'Пользователь с таким именем уже существует.', html=True)
